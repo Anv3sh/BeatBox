@@ -1,86 +1,32 @@
 {
   "version": "0.1.0",
-  "name": "spotify_spl_program",
+  "name": "spotify_clone",
   "instructions": [
     {
       "name": "acceptPayment",
       "accounts": [
-        {
-          "name": "payerWallet",
-          "isMut": true,
-          "isSigner": false
-        },
-        {
-          "name": "receiver",
-          "isMut": true,
-          "isSigner": false
-        },
-        {
-          "name": "authority",
-          "isMut": true,
-          "isSigner": true
-        },
-        {
-          "name": "systemProgram",
-          "isMut": false,
-          "isSigner": false
-        },
-        {
-          "name": "tokenProgram",
-          "isMut": false,
-          "isSigner": false
-        },
-        {
-          "name": "clock",
-          "isMut": false,
-          "isSigner": false
-        }
+        { "name": "payerWallet", "isMut": true, "isSigner": false },
+        { "name": "receiver", "isMut": true, "isSigner": false },
+        { "name": "authority", "isMut": true, "isSigner": true },
+        { "name": "systemProgram", "isMut": false, "isSigner": false },
+        { "name": "tokenProgram", "isMut": false, "isSigner": false },
+        { "name": "clock", "isMut": false, "isSigner": false }
       ],
       "args": []
     },
     {
       "name": "createMusic",
       "accounts": [
-        {
-          "name": "music",
-          "isMut": true,
-          "isSigner": false
-        },
-        {
-          "name": "randomkey",
-          "isMut": true,
-          "isSigner": false
-        },
-        {
-          "name": "authority",
-          "isMut": true,
-          "isSigner": true
-        },
-        {
-          "name": "systemProgram",
-          "isMut": false,
-          "isSigner": false
-        },
-        {
-          "name": "tokenProgram",
-          "isMut": false,
-          "isSigner": false
-        },
-        {
-          "name": "clock",
-          "isMut": false,
-          "isSigner": false
-        }
+        { "name": "music", "isMut": true, "isSigner": false },
+        { "name": "randomkey", "isMut": true, "isSigner": false },
+        { "name": "authority", "isMut": true, "isSigner": true },
+        { "name": "systemProgram", "isMut": true, "isSigner": false },
+        { "name": "tokenProgram", "isMut": false, "isSigner": false },
+        { "name": "clock", "isMut": false, "isSigner": false }
       ],
       "args": [
-        {
-          "name": "title",
-          "type": "string"
-        },
-        {
-          "name": "musicUrl",
-          "type": "string"
-        }
+        { "name": "title", "type": "string" },
+        { "name": "musicUrl", "type": "string" }
       ]
     }
   ],
@@ -89,12 +35,7 @@
       "name": "PayerAccount",
       "type": {
         "kind": "struct",
-        "fields": [
-          {
-            "name": "wallet",
-            "type": "publicKey"
-          }
-        ]
+        "fields": [{ "name": "wallet", "type": "publicKey" }]
       }
     },
     {
@@ -102,23 +43,11 @@
       "type": {
         "kind": "struct",
         "fields": [
-          {
-            "name": "authority",
-            "type": "publicKey"
-          },
-          {
-            "name": "title",
-            "type": "string"
-          },
-          {
-            "name": "musicUrl",
-            "type": "string"
-          }
+          { "name": "authority", "type": "publicKey" },
+          { "name": "title", "type": "string" },
+          { "name": "musicUrl", "type": "string" }
         ]
       }
     }
-  ],
-  "metadata": {
-    "address": "5wSMdEYxSW7iB3rdE7c8yB3bqBUrVtvggjDdY5viyDLk"
-  }
+  ]
 }
