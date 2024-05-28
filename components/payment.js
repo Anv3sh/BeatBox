@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { getProgramInstance } from '../utils/utils'
 import { TOKEN_PROGRAM_ID } from '@solana/spl-token'
-import { SOLANA_HOST } from '../utils/const'
+import { RPC_URL } from '../utils/const'
 import { PublicKey } from '@solana/web3.js'
-import { useWallet } from '@solana/wallet-adapter-react'
+import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import HomePage from '../pages/homepage'
 
 const anchor = require('@project-serum/anchor')
@@ -19,8 +19,8 @@ const defaultAccounts = {
 }
 
 export const Payment = () => {
-  const wallet = useWallet()
-  const connection = new anchor.web3.Connection(SOLANA_HOST)
+  const wallet = useAnchorWallet()
+  const connection = new anchor.web3.Connection(RPC_URL, 'confirmed')
   const program = getProgramInstance(connection, wallet)
   const [payers, setPayers] = useState([])
   const [isPaid, setPaid] = useState(false)
