@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import * as anchor from '@coral-xyz/anchor'
 import { getProgramInstance } from '../utils/utils'
 import { TOKEN_PROGRAM_ID } from '@solana/spl-token'
 import { RPC_URL } from '../utils/const'
@@ -6,7 +7,7 @@ import { PublicKey } from '@solana/web3.js'
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import HomePage from '../pages/homepage'
 
-const anchor = require('@project-serum/anchor')
+// const anchor = require('@project-serum/anchor')
 
 const { web3 } = anchor
 const { SystemProgram } = web3
