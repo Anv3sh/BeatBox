@@ -33,7 +33,7 @@ const Header = ({ setShowUploadMusic }) => {
         </div>
 
         <div className={style.headerRight}>
-          <UploadButton setShowUploadMusic={setShowUploadMusic} />
+          {/* <UploadButton setShowUploadMusic={setShowUploadMusic} /> */}
 
           <div className={style.profile}>
             <div className={style.profileAvatarContainer}>
